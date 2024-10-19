@@ -7,7 +7,7 @@ author_url: "https://gravatar.com/uniquesaykas"
 gravatar: "1ce8ba62e25a954e62c9d65f77d6079d"
 categories: [Technology, Android, Updates]
 tags: [Android 15, Samsung, Xiaomi, Sony, Motorola, Google Pixel]
-image: assets/images/android15-eligible-devices.webp
+image: assets/images/android-15-eligible-devices.webp
 keywords: "Android 15, eligible devices, Samsung, Xiaomi, Sony, Android updates"
 date: 2024-10-19T15:45:00+05:30
 ---
