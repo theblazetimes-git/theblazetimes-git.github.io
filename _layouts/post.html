@@ -34,23 +34,23 @@ post_class: post-template
         </div>
         {% endif %}
         <!-- Post Title -->
-        <h1 class="posttitle">{{ page.title }}</h1>
+        <h1 itemprop="headline" class="posttitle">{{ page.title }}</h1>
       </div>
       <!-- Post Featured Image -->
       {% if page.image %}
       {% if site.lazyimages == "enabled" %}
-      <img class="featured-image img-fluid lazyimg" 
+      <img itemprop="image" class="featured-image img-fluid lazyimg" 
         src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAQAAAA3fa6RAAAADklEQVR42mNkAANGCAUAACMAA2w/AMgAAAAASUVORK5CYII=" 
         data-src="{% if page.image contains '://' %}{{ page.image }}{% else %}{{ site.url }}/{{ page.image }}{% endif %}" 
         alt="{{ page.title }}" title="{{ page.title }}" />
       {% else %}
-      <img class="featured-image img-fluid" 
+      <img itemprop="image" class="featured-image img-fluid" 
         src="{% if page.image contains '://' %}{{ page.image }}{% else %}{{ site.url }}/{{ page.image }}{% endif %}" 
         alt="{{ page.title }}" title="{{ page.title }}" />
       {% endif %}
       {% endif %}
       <!-- Post Content -->
-      <div class="article-post">
+      <div itemprop="articleBody" class="article-post">
         {% if page.toc %}
         {% if page.beforetoc %}
         <p><em>{{ page.beforetoc }}</em></p>
@@ -73,7 +73,7 @@ post_class: post-template
       <p>
         <small>
         <span class="post-date">
-        <time class="post-date" datetime="{{ page.date | date: '%Y-%m-%d' }}">{{ page.date | date_to_string }}</time>
+        <time itemprop="datePublished" class="post-date" datetime="{{ page.date | date: '%Y-%m-%d' }}">{{ page.date | date_to_string }}</time>
         </span>
         {% if page.last_modified_at %}
         (Updated: <time datetime="{{ page.last_modified_at | date_to_xmlschema }}" itemprop="dateModified">{{ page.last_modified_at | date: '%b %-d, %Y' }}</time>)
