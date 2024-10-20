@@ -1,6 +1,7 @@
 ---
 layout: page
 title: About
+description: Learn about The Blaze Times, your go-to source for coding tutorials, scripts, and programming insights. Discover our mission and the team behind the blog.
 permalink: /about
 comments: true
 ---
