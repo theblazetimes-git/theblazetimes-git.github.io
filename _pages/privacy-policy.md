@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Privacy Policy
+description: Read The Blaze Times' Privacy Policy to understand how we collect, use, and protect your data while browsing our coding tutorials and resources.
 permalink: /privacy-policy
 comments: true
 ---
