@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Disclaimer
+description: View The Blaze Times' Disclaimer to understand our stance on liability, accuracy of content, and the general use of information from our website.
 permalink: /disclaimer
 comments: true
 ---
