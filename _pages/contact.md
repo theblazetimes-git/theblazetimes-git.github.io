@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Contact
+description: Get in touch with The Blaze Times for inquiries, collaborations, or support. Contact us via email or use our contact form for prompt assistance.
 permalink: /contact
 comments: true
 ---
