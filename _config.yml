@@ -3,7 +3,7 @@ name: "The Blaze Times"
 title: "The Blaze Times"
 description: "Get the latest breaking news and insightful analysis with The Blaze Times. Stay updated on politics, culture, and more."
 keywords: "latest news updates, political news, technology news, current affairs, India news"
-logo: 'https://www.theblazetimes.in/logo.png'
+logo: 'https://www.theblazetimes.in/logo.webp'
 image: "https://www.theblazetimes.in/the-blaze-times.png"
 favicon: 'favicon.ico'
 disqus: 'the-blaze-times'
