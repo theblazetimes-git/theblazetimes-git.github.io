@@ -239,85 +239,93 @@
   {% capture layout %}{% if page.layout %}layout-{{ page.layout }}{% endif %}{% endcapture %}
   <body class="{{layout}}">
     <!--<header>-->
-      <!-- Begin Menu Navigation -->
-      <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top mediumnavigation nav-down">
-        <div class="container pr-0">
-          <!-- Begin Logo -->
-          <a class="navbar-brand" href="{{ site.url }}" ><img src="{{ site.logo }}" alt="{{ site.name }}" title="{{ site.name }}"/></a>
-          <!-- End Logo -->
-          <button class="navbar-toggler" type="button" data-toggle="collapse"
-            data-target="#navbarMediumish" aria-controls="navbarSupportedContent"
-            aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span></button>
-          <div class="collapse navbar-collapse" id="navbarMediumish">
-            <!-- Begin Menu -->
-            <ul class="navbar-nav ml-auto">
-              {% if page.url == "/" %}
-              <li class="nav-item active">
-                {% else %}
-              <li class="nav-item">
-                {% endif %}
-                <a class="nav-link" href="{{ site.url }}">Home</a>
-              </li>
-              <li class="nav-item"><a class="nav-link" href="{{ site.url }}/about">About</a></li>
-              <li class="nav-item"><a class="nav-link" href="{{ site.url }}/contact">Contact</a></li>
-              <li class="nav-item"><a target="_blank" class="nav-link" href="{{ site.url }}/privacy-policy">Privacy Policy</a></li>
-              <li class="nav-item"><a target="_blank" class="nav-link" href="{{ site.url }}/disclaimer">Disclaimer</a></li>
-              <li class="nav-item"><a target="_blank" class="nav-link" href="{{ site.url }}/terms-and-conditions">Terms and Conditions</a></li>
-            </ul>
-            <!-- End Menu -->
-          </div>
+    <!-- Begin Menu Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top mediumnavigation nav-down">
+      <div class="container pr-0">
+        <!-- Begin Logo -->
+        <a class="navbar-brand" href="{{ site.url }}" ><img src="{{ site.logo }}" alt="{{ site.name }}" title="{{ site.name }}"/></a>
+        <!-- End Logo -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse"
+          data-target="#navbarMediumish" aria-controls="navbarSupportedContent"
+          aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="navbarMediumish">
+          <!-- Begin Menu -->
+          <ul class="navbar-nav ml-auto">
+            {% if page.url == "/" %}
+            <li class="nav-item active">
+              {% else %}
+            <li class="nav-item">
+              {% endif %}
+              <a class="nav-link" href="{{ site.url }}">Home</a>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="{{ site.url }}/about">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="{{ site.url }}/contact">Contact</a></li>
+            <li class="nav-item"><a target="_blank" class="nav-link" href="{{ site.url }}/privacy-policy">Privacy Policy</a></li>
+            <li class="nav-item"><a target="_blank" class="nav-link" href="{{ site.url }}/disclaimer">Disclaimer</a></li>
+            <li class="nav-item"><a target="_blank" class="nav-link" href="{{ site.url }}/terms-and-conditions">Terms and Conditions</a></li>
+          </ul>
+          <!-- End Menu -->
         </div>
-      </nav>
+      </div>
+    </nav>
     <!--</header>-->
     <!-- End Navigation -->
     <div class="site-content">
-      <div class="container">
-        <!-- Site Title -->
-        <div class="mainheading">
-          <h1 class="sitetitle">{{ page.title }}</h1>
-          <p class="lead">{{ page.description }}</p>
-        </div>
-        <!-- Content -->
-        <div class="main-content">
-          {{ content }}
-        </div>
-        {% if site.mailchimp-list %}
-        <!-- Bottom Alert Bar -->
-        <div class="alertbar">
-          <div class="container text-center">
-            <span>Never miss a <b>story</b> from us, subscribe to our newsletter</span>
-            <form action="{{site.mailchimp-list}}" method="post"
-              name="mc-embedded-subscribe-form" class="wj-contact-form validate"
-              target="_blank" novalidate>
-              <div class="mc-field-group">
-                <input type="email" placeholder="Email" name="EMAIL"
-                  class="required email" id="mce-EMAIL" autocomplete="on" required />
-                <input type="submit" value="Subscribe" name="subscribe" class="heart" />
-              </div>
-            </form>
+      <article>
+        <div class="container">
+          <!-- Site Title -->
+          <div class="mainheading">
+            <h1 class="sitetitle">{{ page.title }}</h1>
+            <p class="lead">{{ page.description }}</p>
           </div>
-        </div>
-        {% endif %}
-      </div>
-      <!-- Categories Jumbotron -->
-      <div class="jumbotron fortags">
-        <div class="d-md-flex h-100">
-          <div class="col-md-4 transpdark align-self-center text-center h-100">
-            <div class="d-md-flex align-items-center justify-content-center h-100">
-              <h2 class="d-md-block align-self-center py-1 font-weight-light">Explore <span class="d-none d-md-inline">→</span></h2>
+          <!-- Content -->
+          <div class="main-content">
+            {{ content }}
+          </div>
+          {% if site.mailchimp-list %}
+          <!-- Bottom Alert Bar -->
+          <div class="alertbar">
+            <div class="container text-center">
+              <span>Never miss a <b>story</b> from us, subscribe to our newsletter</span>
+              <form action="{{site.mailchimp-list}}" method="post"
+                name="mc-embedded-subscribe-form" class="wj-contact-form validate"
+                target="_blank" novalidate>
+                <div class="mc-field-group">
+                  <input type="email" placeholder="Email" name="EMAIL"
+                    class="required email" id="mce-EMAIL" autocomplete="on" required />
+                  <input type="submit" value="Subscribe" name="subscribe" class="heart" />
+                </div>
+              </form>
             </div>
           </div>
-          <div class="col-md-8 p-5 align-self-center text-center">
-            {% include categories-manual.html %}
+          {% endif %}
+        </div>
+        <!-- Categories Jumbotron -->
+        <div class="jumbotron fortags">
+          <div class="d-md-flex h-100">
+            <div class="col-md-4 transpdark align-self-center text-center h-100">
+              <div class="d-md-flex align-items-center justify-content-center h-100">
+                <h2 class="d-md-block align-self-center py-1 font-weight-light">Explore <span class="d-none d-md-inline">→</span></h2>
+              </div>
+            </div>
+            <div class="col-md-8 p-5 align-self-center text-center">
+              {% include categories-manual.html %}
+            </div>
           </div>
         </div>
-      </div>
+      </article>
       <!-- Footer -->
       <footer class="footer">
         <div class="container">
           <div class="row">
-            <div class="col-md-6 col-sm-6 text-center text-lg-left">Copyright © {{ site.time | date: "%Y" }} <span itemprop="publisher" itemscope itemtype="http://schema.org/Organization"><span itemprop="name">{{ site.name }}</span><meta itemprop="logo" content="{{ site.logo }}" /></span></div>
+            <div class="col-md-6 col-sm-6 text-center text-lg-left">
+              Copyright © {{ site.time | date: "%Y" }} 
+              <span itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+                <span itemprop="name">{{ site.name }}</span>
+                <meta itemprop="logo" content="{{ site.logo }}" />
+              </span>
+            </div>
             <div class="col-md-6 col-sm-6 text-center text-lg-right">Developed By It Is Unique Official</div>
           </div>
         </div>
