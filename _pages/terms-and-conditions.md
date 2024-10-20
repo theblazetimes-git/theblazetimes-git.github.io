@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Terms and Conditions
+description: Explore the Terms and Conditions of The Blaze Times to learn about your rights and responsibilities when using our website and accessing our content.
 permalink: /terms-and-conditions
 comments: true
 ---
